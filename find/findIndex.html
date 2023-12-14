@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //findUserByUsername
+        function findUserByUsername(usersArray, username) {
+            return usersArray.find(function(user){
+                return user.username === username;
+            })
+        }
+        console.log(findUserByUsername());
+
+        
+        function removeUser(usersArray, username) {
+            let foundIndex = usersArray.findIndex(function(user){
+                return user.username === username;
+            })
+            if(foundIndex === -1) return;
+
+            return usersArray.splice(foundIndex,1)[0];
+        }
+    </script>
+</body>
+</html>
